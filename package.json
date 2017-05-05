@@ -1,0 +1,34 @@
+{
+  "name": "corkscrew-drawer-mock",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.sass",
+  "scripts": {
+    "postinstall": "http-server -p 3000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mystrdat/corkscrew-drawer-mock.git"
+  },
+  "author": "mystrdat",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mystrdat/corkscrew-drawer-mock/issues"
+  },
+  "homepage": "https://github.com/mystrdat/corkscrew-drawer-mock#readme",
+  "dependencies": {
+    "autoprefixer": "^6.3.3",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.3",
+    "gulp-postcss": "^6.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "http-server": "^0.10.0",
+    "inStyle": "^1.6.1",
+    "include-media": "^1.4.4",
+    "layout-tools": "^2.0.8",
+    "normalize-scss": "^5.0.3"
+  }
+}

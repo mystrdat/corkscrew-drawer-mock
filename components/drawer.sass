@@ -1,0 +1,96 @@
+/*
+  Drawer
+  ============================== */
+
+.drawer
+  width: 100%
+  position: fixed
+  bottom: 0
+  left: 0
+  transform: translateY(calc(100% - 45px))
+  transition: transform $transitionDuration ease-in-out 100ms
+  will-change: transform
+  background-color: #fff
+
+  .active &
+    transform: translateY(0)
+
+  header
+    position: relative
+    height: 45px
+    color: #fff
+    background-color: #800020
+    
+    .dish,
+    .add-dish,
+    .show-dishes
+      line-height: 24px
+    
+    .dish
+      +abs(center)
+      text-align: center
+      opacity: 0
+      transition: all $transitionDuration ease-in-out
+      transform: translate(calc(-50% - 30px),-50%) scale(0.01)
+
+      .active &
+        opacity: 1
+        transform: translate(-50%,-50%) scale(1)
+  
+    .add-dish
+      +abs(left center)
+      width: 50%
+      background: url(assets/icon-cutlery.png) no-repeat 30px 50% / auto 16px
+      padding-left: 70px
+      transition: all $transitionDuration ease-in-out
+      border-right: 1px solid rgba(255,255,255,0.4)
+      transform-origin: 0 50%
+
+      .active &
+        opacity: 0
+        transform: translate(-30px,-50%) scale(0.7)
+    
+    .show-dishes
+      +abs(right 46px center)
+      transition: all $transitionDuration ease-in-out
+      transform-origin: 100% 50%
+
+      .active &
+        opacity: 0
+        transform: translate(30px,50%) scale(0.7)
+    
+    .chevron
+      +abs(right 20px center)
+      width: 16px
+      height: 30px
+      background: url(assets/icon-chevron.png) no-repeat 50% / 14px auto
+      transition: all $transitionDuration ease-in-out
+
+      .active &
+        transform: rotate(180deg) translateY(-50%)
+  
+  main
+    position: relative
+    text-align: center
+    height: 75vh
+
+    blockquote
+      +abs(center)
+      margin: 0
+      display: block
+      font-style: italic
+      font-size: 24px
+      color: #999
+
+      &:before
+        content: '\201C'
+
+      &:after
+        content: '\201D'
+
+    span
+      +abs(center)
+      margin-top: 55px
+      font-size: 16px
+      font-style: italic
+      color: #ccc

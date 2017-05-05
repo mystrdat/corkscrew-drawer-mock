@@ -1,0 +1,128 @@
+/*
+  Layout
+  ============================== */
+
+.view
+  position: relative
+  height: 100%
+  background: #111114 url(assets/gradient.png) no-repeat left top / 100% auto
+
+  .bottle
+    +abs(fill)
+    background: url(assets/bottle.png) no-repeat left top / 100% auto
+    transition: all $transitionDuration ease-in-out
+
+    .active &
+      transform: translateY(-50px)
+  
+  .label
+    +abs(fill)
+    background: url(assets/label.png) no-repeat left top / 100% auto
+    transition: all $transitionDuration ease-in-out
+
+    .active &
+      transform: translateY(-50px)
+
+  .overlay
+    +abs(fill)
+    background-color: rgba(0,0,0,0)
+    transition: background-color $transitionDuration ease-in-out
+    pointer-events: none
+
+    .active &
+      background-color: rgba(0,0,0,0.6)
+  
+  .restaurant
+    +abs(center 29.3vh)
+    font-weight: $fontBold
+    color: #111
+    transition: all $transitionDuration ease-in-out
+
+    .active &
+      opacity: 0
+      transform: translate(-50%, -50px)
+  
+  .wine
+    +abs(center 37vh)
+    width: 100%
+    height: 44px
+    font-weight: $fontBold
+    font-size: 18px
+    text-align: left
+    color: #811B34
+    transition: all $transitionDuration ease-in-out
+
+    .active &
+      +abs(center 2.5vh)
+
+    .row
+      line-height: 22px
+      display: block
+      white-space: nowrap
+      transition: all $transitionDuration ease-in-out
+
+      .active &
+        color: #fff
+    
+    .row1
+      +abs(center top)
+
+      .active &
+        +abs(15px top)
+        transform: none
+    
+    .row2
+      +abs(center bottom)
+
+      .active &
+        +abs(15px bottom)
+        transform: none
+  
+  .price
+    +abs(center 45.5vh)
+    font-size: 14px
+    transition: all $transitionDuration ease-in-out
+
+    .active &
+      opacity: 0
+      transform: translate(-50%, -50px)
+  
+  .rating
+    +abs(center 49.5vh)
+    font-size: 12px
+    line-height: 20px
+    border: 1px solid #E0E0DE
+    border-radius: 10px
+    padding: 0 10px 0 30px
+    background: #F9F9F7 url(assets/icon-star.png) no-repeat 10px 50% / 13px auto
+    transition: all $transitionDuration ease-in-out
+
+    .active &
+      opacity: 0
+      transform: translate(-50%, -50px)
+  
+  .location
+    +abs(center 57vh)
+    width: 60%
+    text-align: center
+    transition: all $transitionDuration ease-in-out
+
+    .active &
+      opacity: 0
+      transform: translate(-50%, -50px)
+  
+  .others
+    +abs(left 15 top 11vh)
+    color: #fff
+    opacity: 0
+    font-size: 14px
+    transform: translateX(0px)
+    transition: all $transitionDuration/5 ease-in-out
+
+    .active &
+      opacity: 0.4
+      transform: translateX(15px)
+      transition: all $transitionDuration ease-in-out 450ms
+
+
+
